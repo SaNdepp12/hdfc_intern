@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Digital Onboarding Analytics Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="brand">
+        <div class="logo-block">HDFC</div>
+        <div>
+          <p class="brand-title">Digital Onboarding</p>
+          <p class="brand-subtitle">Business Analytics Dashboard</p>
+        </div>
+      </div>
+      <div class="topbar-actions">
+        <button class="ghost-btn">Download Report</button>
+        <button class="primary-btn">View Live</button>
+      </div>
+    </header>
+
+    <aside class="sidebar">
+      <nav>
+        <a class="nav-item active" href="#executive-summary">Executive Summary</a>
+        <a class="nav-item" href="#avg-time">Avg Time to Complete</a>
+        <a class="nav-item" href="#funnel">Onboarding Funnel</a>
+        <a class="nav-item" href="#channel">Channel Performance</a>
+        <a class="nav-item" href="#bottlenecks">Time Bottlenecks</a>
+        <a class="nav-item" href="#friction">Friction Indicators</a>
+        <a class="nav-item" href="#trends">Trend Analysis</a>
+        <a class="nav-item" href="#definitions">KPI Definitions</a>
+      </nav>
+    </aside>
+
+    <main class="content">
+      <section id="executive-summary" class="page">
+        <div class="page-header">
+          <div>
+            <h1>Executive Summary</h1>
+            <p>Is onboarding healthy today? A clean view of conversion, friction, and risk signals.</p>
+          </div>
+          <div class="status-pill">
+            <span>Health</span>
+            <strong>Stable</strong>
+          </div>
+        </div>
+        <div class="kpi-grid">
+          <div class="kpi-card">
+            <p>Avg Time to Complete</p>
+            <h2>08m 24s</h2>
+            <span class="trend up">▲ 6% vs last week</span>
+          </div>
+          <div class="kpi-card">
+            <p>Total Journeys Started</p>
+            <h2>28,450</h2>
+            <span class="trend up">▲ 11% MoM</span>
+          </div>
+          <div class="kpi-card">
+            <p>Completion Rate</p>
+            <h2>71.8%</h2>
+            <span class="trend down">▼ 2.1% vs target</span>
+          </div>
+          <div class="kpi-card">
+            <p>Drop-Off Rate</p>
+            <h2>18.9%</h2>
+            <span class="trend down">▲ 1.3% WoW</span>
+          </div>
+          <div class="kpi-card">
+            <p>Best Performing Channel</p>
+            <h2>Mobile</h2>
+            <span class="tag">Avg 06m 12s</span>
+          </div>
+          <div class="kpi-card">
+            <p>Worst Performing Stage</p>
+            <h2>KYC Upload</h2>
+            <span class="tag">24% drop-off</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="avg-time" class="page">
+        <div class="page-header">
+          <div>
+            <h1>Average Time to Complete Onboarding</h1>
+            <p>Track speed to finish from link open to completion. Median shows true user experience.</p>
+          </div>
+          <div class="pill-group">
+            <span class="pill">Avg: 08m 24s</span>
+            <span class="pill">Median: 06m 10s</span>
+          </div>
+        </div>
+        <div class="grid-2">
+          <div class="panel">
+            <div class="panel-header">
+              <h3>Time Distribution</h3>
+              <span class="note">Fast vs slow users</span>
+            </div>
+            <div class="distribution">
+              <div class="dist-bar fast" style="width: 42%">
+                <span>Fast (≤5m)</span>
+                <strong>42%</strong>
+              </div>
+              <div class="dist-bar medium" style="width: 35%">
+                <span>Mid (5-10m)</span>
+                <strong>35%</strong>
+              </div>
+              <div class="dist-bar slow" style="width: 23%">
+                <span>Slow (≥10m)</span>
+                <strong>23%</strong>
+              </div>
+            </div>
+          </div>
+          <div class="panel">
+            <div class="panel-header">
+              <h3>Channel-wise Avg Time</h3>
+              <span class="note">Mobile should be fastest</span>
+            </div>
+            <div class="bar-chart">
+              <div class="bar-row">
+                <span>Mobile</span>
+                <div class="bar"><div style="width: 68%"></div></div>
+                <strong>06m 12s</strong>
+              </div>
+              <div class="bar-row">
+                <span>Web</span>
+                <div class="bar"><div style="width: 82%"></div></div>
+                <strong>08m 10s</strong>
+              </div>
+              <div class="bar-row">
+                <span>RM Assisted</span>
+                <div class="bar"><div style="width: 100%"></div></div>
+                <strong>11m 38s</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="funnel" class="page">
+        <div class="page-header">
+          <div>
+            <h1>Overall Onboarding Funnel</h1>
+            <p>Understand where customers leave and which steps need urgent fixes.</p>
+          </div>
+          <div class="pill-group">
+            <span class="pill">Started: 28,450</span>
+            <span class="pill">Completed: 20,430</span>
+            <span class="pill">Drop-offs: 5,370</span>
+          </div>
+        </div>
+        <div class="grid-2">
+          <div class="panel">
+            <div class="panel-header">
+              <h3>Funnel Conversion</h3>
+              <span class="note">% completed at each stage</span>
+            </div>
+            <div class="funnel">
+              <div class="funnel-step" style="width: 100%">Link Opened <strong>100%</strong></div>
+              <div class="funnel-step" style="width: 82%">Profile Details <strong>82%</strong></div>
+              <div class="funnel-step" style="width: 69%">KYC Upload <strong>69%</strong></div>
+              <div class="funnel-step" style="width: 62%">Video Verification <strong>62%</strong></div>
+              <div class="funnel-step" style="width: 55%">Account Setup <strong>55%</strong></div>
+            </div>
+          </div>
+          <div class="panel">
+            <div class="panel-header">
+              <h3>Drop-off Hotspots</h3>
+              <span class="note">Largest exits by stage</span>
+            </div>
+            <ul class="dropoff-list">
+              <li>
+                <span>KYC Upload</span>
+                <strong>24% drop-off</strong>
+              </li>
+              <li>
+                <span>Video Verification</span>
+                <strong>13% drop-off</strong>
+              </li>
+              <li>
+                <span>Profile Details</span>
+                <strong>11% drop-off</strong>
+              </li>
+              <li>
+                <span>Account Setup</span>
+                <strong>7% drop-off</strong>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="channel" class="page">
+        <div class="page-header">
+          <div>
+            <h1>Channel Performance</h1>
+            <p>Compare completion, time, and errors across Web, Mobile, and RM journeys.</p>
+          </div>
+          <div class="status-pill">
+            <span>Best Channel</span>
+            <strong>Mobile</strong>
+          </div>
+        </div>
+        <div class="grid-2">
+          <div class="panel">
+            <div class="panel-header">
+              <h3>Completion Rate by Channel</h3>
+              <span class="note">Mobile leads, RM lags</span>
+            </div>
+            <div class="bar-chart">
+              <div class="bar-row">
+                <span>Mobile</span>
+                <div class="bar"><div style="width: 84%"></div></div>
+                <strong>82%</strong>
+              </div>
+              <div class="bar-row">
+                <span>Web</span>
+                <div class="bar"><div style="width: 70%"></div></div>
+                <strong>68%</strong>
+              </div>
+              <div class="bar-row">
+                <span>RM Assisted</span>
+                <div class="bar"><div style="width: 52%"></div></div>
+                <strong>51%</strong>
+              </div>
+            </div>
+          </div>
+          <div class="panel">
+            <div class="panel-header">
+              <h3>Channel Scorecard</h3>
+              <span class="note">Drop-off, time & errors</span>
+            </div>
+            <table>
+              <thead>
+                <tr>
+                  <th>Channel</th>
+                  <th>Drop-off</th>
+                  <th>Avg Time</th>
+                  <th>Error Rate</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Mobile</td>
+                  <td>12%</td>
+                  <td>06m 12s</td>
+                  <td>1.8%</td>
+                </tr>
+                <tr>
+                  <td>Web</td>
+                  <td>19%</td>
+                  <td>08m 10s</td>
+                  <td>2.9%</td>
+                </tr>
+                <tr>
+                  <td>RM Assisted</td>
+                  <td>31%</td>
+                  <td>11m 38s</td>
+                  <td>4.5%</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section id="bottlenecks" class="page">
+        <div class="page-header">
+          <div>
+            <h1>Time Bottleneck Analysis</h1>
+            <p>Pinpoint stages causing the biggest delays and SLA risks.</p>
+          </div>
+          <div class="pill-group">
+            <span class="pill">Longest Stage: KYC Upload</span>
+            <span class="pill">SLA Breach: 18%</span>
+          </div>
+        </div>
+        <div class="grid-2">
+          <div class="panel">
+            <div class="panel-header">
+              <h3>Avg Time by Stage</h3>
+              <span class="note">Minutes spent per stage</span>
+            </div>
+            <div class="bar-chart horizontal">
+              <div class="bar-row">
+                <span>Profile Details</span>
+                <div class="bar"><div style="width: 54%"></div></div>
+                <strong>2.3m</strong>
+              </div>
+              <div class="bar-row">
+                <span>KYC Upload</span>
+                <div class="bar"><div style="width: 100%"></div></div>
+                <strong>4.8m</strong>
+              </div>
+              <div class="bar-row">
+                <span>Video Verification</span>
+                <div class="bar"><div style="width: 79%"></div></div>
+                <strong>3.8m</strong>
+              </div>
+              <div class="bar-row">
+                <span>Account Setup</span>
+                <div class="bar"><div style="width: 44%"></div></div>
+                <strong>2.0m</strong>
+              </div>
+            </div>
+          </div>
+          <div class="panel">
+            <div class="panel-header">
+              <h3>Stage × SLA Heatmap</h3>
+              <span class="note">% users beyond SLA</span>
+            </div>
+            <div class="heatmap">
+              <div class="heatmap-row">
+                <span>Profile Details</span>
+                <div class="heat" data-level="low">6%</div>
+                <div class="heat" data-level="medium">11%</div>
+                <div class="heat" data-level="high">14%</div>
+              </div>
+              <div class="heatmap-row">
+                <span>KYC Upload</span>
+                <div class="heat" data-level="medium">12%</div>
+                <div class="heat" data-level="high">18%</div>
+                <div class="heat" data-level="high">22%</div>
+              </div>
+              <div class="heatmap-row">
+                <span>Video Verification</span>
+                <div class="heat" data-level="low">5%</div>
+                <div class="heat" data-level="medium">9%</div>
+                <div class="heat" data-level="high">16%</div>
+              </div>
+              <div class="heatmap-row">
+                <span>Account Setup</span>
+                <div class="heat" data-level="low">4%</div>
+                <div class="heat" data-level="medium">7%</div>
+                <div class="heat" data-level="medium">10%</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="friction" class="page">
+        <div class="page-header">
+          <div>
+            <h1>Customer Friction Indicators</h1>
+            <p>Surface UX and policy issues affecting conversion and customer sentiment.</p>
+          </div>
+          <div class="status-pill">
+            <span>Friction Score</span>
+            <strong>Moderate (62/100)</strong>
+          </div>
+        </div>
+        <div class="grid-2">
+          <div class="panel">
+            <div class="panel-header">
+              <h3>Top Friction Signals</h3>
+              <span class="note">Weighted score by reason</span>
+            </div>
+            <div class="friction-score">
+              <div>
+                <span>Long Forms</span>
+                <strong>24</strong>
+              </div>
+              <div>
+                <span>Repeated Attempts</span>
+                <strong>18</strong>
+              </div>
+              <div>
+                <span>Permission Issues</span>
+                <strong>12</strong>
+              </div>
+              <div>
+                <span>Session Timeouts</span>
+                <strong>8</strong>
+              </div>
+            </div>
+            <div class="stacked-bar">
+              <div style="width: 40%">Long Forms</div>
+              <div style="width: 30%">Repeated Attempts</div>
+              <div style="width: 20%">Permission Issues</div>
+              <div style="width: 10%">Timeouts</div>
+            </div>
+          </div>
+          <div class="panel">
+            <div class="panel-header">
+              <h3>Friction Breakdown</h3>
+              <span class="note">Share of total friction</span>
+            </div>
+            <div class="pie">
+              <div class="slice" style="--value: 40">Long Forms 40%</div>
+              <div class="slice" style="--value: 25">Retries 25%</div>
+              <div class="slice" style="--value: 20">Permissions 20%</div>
+              <div class="slice" style="--value: 15">Timeouts 15%</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="trends" class="page">
+        <div class="page-header">
+          <div>
+            <h1>Trend Analysis</h1>
+            <p>Monitor growth, drop-offs, and performance shifts over time.</p>
+          </div>
+          <div class="pill-group">
+            <span class="pill">Daily</span>
+            <span class="pill active">Weekly</span>
+            <span class="pill">Monthly</span>
+            <span class="pill">Yearly</span>
+          </div>
+        </div>
+        <div class="grid-2">
+          <div class="panel">
+            <div class="panel-header">
+              <h3>Journeys & Completion Trend</h3>
+              <span class="note">Last 8 weeks</span>
+            </div>
+            <div class="line-chart">
+              <div class="line started"></div>
+              <div class="line completed"></div>
+              <div class="line dropoffs"></div>
+            </div>
+            <div class="legend">
+              <span class="legend-item"><span class="dot started"></span>Started</span>
+              <span class="legend-item"><span class="dot completed"></span>Completed</span>
+              <span class="legend-item"><span class="dot dropoffs"></span>Drop-offs</span>
+            </div>
+          </div>
+          <div class="panel">
+            <div class="panel-header">
+              <h3>Avg Time & Error Rate</h3>
+              <span class="note">Seasonality comparison</span>
+            </div>
+            <div class="line-chart">
+              <div class="line avgtime"></div>
+              <div class="line errors"></div>
+            </div>
+            <div class="legend">
+              <span class="legend-item"><span class="dot avgtime"></span>Avg Time</span>
+              <span class="legend-item"><span class="dot errors"></span>Error Rate</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="definitions" class="page">
+        <div class="page-header">
+          <div>
+            <h1>KPI Definitions</h1>
+            <p>Shared language for leadership, product, and operations reviews.</p>
+          </div>
+        </div>
+        <div class="panel">
+          <table>
+            <thead>
+              <tr>
+                <th>Metric</th>
+                <th>Definition</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Completion Rate</td>
+                <td>Completed / Started</td>
+              </tr>
+              <tr>
+                <td>Drop-Off Rate</td>
+                <td>Dropped / Started</td>
+              </tr>
+              <tr>
+                <td>Avg Time</td>
+                <td>Avg(sum of stage times)</td>
+              </tr>
+              <tr>
+                <td>Bottleneck Stage</td>
+                <td>Stage with max avg time</td>
+              </tr>
+              <tr>
+                <td>Friction Score</td>
+                <td>Weighted error + retry + time</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
