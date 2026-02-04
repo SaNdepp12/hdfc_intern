@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Channel Performance | Digital Onboarding Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="brand">
+        <div class="logo-block">HDFC</div>
+        <div>
+          <p class="brand-title">Digital Onboarding</p>
+          <p class="brand-subtitle">Business Analytics Dashboard</p>
+        </div>
+      </div>
+      <div class="topbar-actions">
+        <button class="ghost-btn">Download Report</button>
+        <button class="primary-btn">View Live</button>
+      </div>
+    </header>
+
+    <aside class="sidebar">
+      <nav>
+        <a class="nav-item" href="index.html">Executive Summary</a>
+        <a class="nav-item" href="avg-time.html">Avg Time to Complete</a>
+        <a class="nav-item" href="funnel.html">Onboarding Funnel</a>
+        <a class="nav-item active" href="channel.html">Channel Performance</a>
+        <a class="nav-item" href="bottlenecks.html">Time Bottlenecks</a>
+        <a class="nav-item" href="friction.html">Friction Indicators</a>
+        <a class="nav-item" href="trends.html">Trend Analysis</a>
+        <a class="nav-item" href="definitions.html">KPI Definitions</a>
+      </nav>
+    </aside>
+
+    <main class="content">
+      <section class="page">
+        <div class="page-header">
+          <div>
+            <h1>Channel Performance</h1>
+            <p>Compare completion, time, and errors across Web, Mobile, and RM journeys.</p>
+          </div>
+          <div class="status-pill">
+            <span>Best Channel</span>
+            <strong>Mobile</strong>
+          </div>
+        </div>
+        <div class="grid-2">
+          <div class="panel">
+            <div class="panel-header">
+              <h3>Completion Rate by Channel</h3>
+              <span class="note">Mobile leads, RM lags</span>
+            </div>
+            <div class="bar-chart">
+              <div class="bar-row">
+                <span>Mobile</span>
+                <div class="bar"><div style="width: 84%"></div></div>
+                <strong>82%</strong>
+              </div>
+              <div class="bar-row">
+                <span>Web</span>
+                <div class="bar"><div style="width: 70%"></div></div>
+                <strong>68%</strong>
+              </div>
+              <div class="bar-row">
+                <span>RM Assisted</span>
+                <div class="bar"><div style="width: 52%"></div></div>
+                <strong>51%</strong>
+              </div>
+            </div>
+          </div>
+          <div class="panel">
+            <div class="panel-header">
+              <h3>Channel Scorecard</h3>
+              <span class="note">Drop-off, time & errors</span>
+            </div>
+            <table>
+              <thead>
+                <tr>
+                  <th>Channel</th>
+                  <th>Drop-off</th>
+                  <th>Avg Time</th>
+                  <th>Error Rate</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Mobile</td>
+                  <td>12%</td>
+                  <td>06m 12s</td>
+                  <td>1.8%</td>
+                </tr>
+                <tr>
+                  <td>Web</td>
+                  <td>19%</td>
+                  <td>08m 10s</td>
+                  <td>2.9%</td>
+                </tr>
+                <tr>
+                  <td>RM Assisted</td>
+                  <td>31%</td>
+                  <td>11m 38s</td>
+                  <td>4.5%</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
