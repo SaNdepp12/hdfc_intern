@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Executive Summary | Digital Onboarding Dashboard</title>
+  <title>KPI Definitions | Digital Onboarding Dashboard</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -27,14 +27,14 @@
 
     <aside class="sidebar">
       <nav>
-        <a class="nav-item active" href="index.html">Executive Summary</a>
+        <a class="nav-item" href="index.html">Executive Summary</a>
         <a class="nav-item" href="avg-time.html">Avg Time to Complete</a>
         <a class="nav-item" href="funnel.html">Onboarding Funnel</a>
         <a class="nav-item" href="channel.html">Channel Performance</a>
         <a class="nav-item" href="bottlenecks.html">Time Bottlenecks</a>
         <a class="nav-item" href="friction.html">Friction Indicators</a>
         <a class="nav-item" href="trends.html">Trend Analysis</a>
-        <a class="nav-item" href="definitions.html">KPI Definitions</a>
+        <a class="nav-item active" href="definitions.html">KPI Definitions</a>
       </nav>
     </aside>
 
@@ -42,45 +42,41 @@
       <section class="page">
         <div class="page-header">
           <div>
-            <h1>Executive Summary</h1>
-            <p>Is onboarding healthy today? A clean view of conversion, friction, and risk signals.</p>
-          </div>
-          <div class="status-pill">
-            <span>Health</span>
-            <strong>Stable</strong>
+            <h1>KPI Definitions</h1>
+            <p>Shared language for leadership, product, and operations reviews.</p>
           </div>
         </div>
-        <div class="kpi-grid">
-          <div class="kpi-card">
-            <p>Avg Time to Complete</p>
-            <h2>08m 24s</h2>
-            <span class="trend up">▲ 6% vs last week</span>
-          </div>
-          <div class="kpi-card">
-            <p>Total Journeys Started</p>
-            <h2>28,450</h2>
-            <span class="trend up">▲ 11% MoM</span>
-          </div>
-          <div class="kpi-card">
-            <p>Completion Rate</p>
-            <h2>71.8%</h2>
-            <span class="trend down">▼ 2.1% vs target</span>
-          </div>
-          <div class="kpi-card">
-            <p>Drop-Off Rate</p>
-            <h2>18.9%</h2>
-            <span class="trend down">▲ 1.3% WoW</span>
-          </div>
-          <div class="kpi-card">
-            <p>Best Performing Channel</p>
-            <h2>Mobile</h2>
-            <span class="tag">Avg 06m 12s</span>
-          </div>
-          <div class="kpi-card">
-            <p>Worst Performing Stage</p>
-            <h2>KYC Upload</h2>
-            <span class="tag">24% drop-off</span>
-          </div>
+        <div class="panel">
+          <table>
+            <thead>
+              <tr>
+                <th>Metric</th>
+                <th>Definition</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Completion Rate</td>
+                <td>Completed / Started</td>
+              </tr>
+              <tr>
+                <td>Drop-Off Rate</td>
+                <td>Dropped / Started</td>
+              </tr>
+              <tr>
+                <td>Avg Time</td>
+                <td>Avg(sum of stage times)</td>
+              </tr>
+              <tr>
+                <td>Bottleneck Stage</td>
+                <td>Stage with max avg time</td>
+              </tr>
+              <tr>
+                <td>Friction Score</td>
+                <td>Weighted error + retry + time</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </section>
     </main>

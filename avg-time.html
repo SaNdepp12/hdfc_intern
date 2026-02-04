@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Average Time to Complete | Digital Onboarding Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="brand">
+        <div class="logo-block">HDFC</div>
+        <div>
+          <p class="brand-title">Digital Onboarding</p>
+          <p class="brand-subtitle">Business Analytics Dashboard</p>
+        </div>
+      </div>
+      <div class="topbar-actions">
+        <button class="ghost-btn">Download Report</button>
+        <button class="primary-btn">View Live</button>
+      </div>
+    </header>
+
+    <aside class="sidebar">
+      <nav>
+        <a class="nav-item" href="index.html">Executive Summary</a>
+        <a class="nav-item active" href="avg-time.html">Avg Time to Complete</a>
+        <a class="nav-item" href="funnel.html">Onboarding Funnel</a>
+        <a class="nav-item" href="channel.html">Channel Performance</a>
+        <a class="nav-item" href="bottlenecks.html">Time Bottlenecks</a>
+        <a class="nav-item" href="friction.html">Friction Indicators</a>
+        <a class="nav-item" href="trends.html">Trend Analysis</a>
+        <a class="nav-item" href="definitions.html">KPI Definitions</a>
+      </nav>
+    </aside>
+
+    <main class="content">
+      <section class="page">
+        <div class="page-header">
+          <div>
+            <h1>Average Time to Complete Onboarding</h1>
+            <p>Track speed to finish from link open to completion. Median shows true user experience.</p>
+          </div>
+          <div class="pill-group">
+            <span class="pill">Avg: 08m 24s</span>
+            <span class="pill">Median: 06m 10s</span>
+          </div>
+        </div>
+        <div class="grid-2">
+          <div class="panel">
+            <div class="panel-header">
+              <h3>Time Distribution</h3>
+              <span class="note">Fast vs slow users</span>
+            </div>
+            <div class="distribution">
+              <div class="dist-bar fast" style="width: 42%">
+                <span>Fast (≤5m)</span>
+                <strong>42%</strong>
+              </div>
+              <div class="dist-bar medium" style="width: 35%">
+                <span>Mid (5-10m)</span>
+                <strong>35%</strong>
+              </div>
+              <div class="dist-bar slow" style="width: 23%">
+                <span>Slow (≥10m)</span>
+                <strong>23%</strong>
+              </div>
+            </div>
+          </div>
+          <div class="panel">
+            <div class="panel-header">
+              <h3>Channel-wise Avg Time</h3>
+              <span class="note">Mobile should be fastest</span>
+            </div>
+            <div class="bar-chart">
+              <div class="bar-row">
+                <span>Mobile</span>
+                <div class="bar"><div style="width: 68%"></div></div>
+                <strong>06m 12s</strong>
+              </div>
+              <div class="bar-row">
+                <span>Web</span>
+                <div class="bar"><div style="width: 82%"></div></div>
+                <strong>08m 10s</strong>
+              </div>
+              <div class="bar-row">
+                <span>RM Assisted</span>
+                <div class="bar"><div style="width: 100%"></div></div>
+                <strong>11m 38s</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
